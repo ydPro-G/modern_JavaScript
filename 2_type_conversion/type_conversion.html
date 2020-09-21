@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--类型转换-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>类型转换</title>
+    </head>
+    <ul>
+        <li>
+            字符串转换：
+            <script>
+                let value = true;
+                alert(typeof value); //因为JS是一门弱语言，所以用typeof检查变量的类型
+
+                value = String(value); //将boolean值使用String方法转换为字符串‘true’
+            </script>
+        </li>
+
+        <li>
+            数字型转换：
+            1. 在算术函数和表达式上，自动进行number类型转换
+            alert("6" / "2"); //3 ,string类型的值被自动转换为数字
+
+            2.使用Number(value)转换
+            let str = "123";
+            let num = Number(str); //变成number类型123
+
+            3. 如果这个字符串不是有效的数字那么会转化失败NaN
+        </li>
+
+        <li>
+            布尔型(boolean)转换:
+            1. 发生在逻辑运算上
+
+            2.通过Boolean(value)显式转换：
+            转换规则：直观为空的值（0，null,undefined,NaN）变为false，其他值变为true
+            注意：非空的字符串重视为true
+        </li>
+    </ul>
+</html>
