@@ -18,19 +18,3 @@ if("0"){ // 这个会执行，因为0是字符串0
 
 
 
-// 使用？ 重写if..else语句
-let message;
-
-if (login == 'Employee') {
-    message = 'Hello';
-  } else if (login == 'Director') {
-    message = 'Greetings';
-  } else if (login == '') {
-    message = 'No login';
-  } else {
-    message = '';
-  }
-
-  // ?重写
-  let message = (login == 'Employee') ? 'hello':
-  
