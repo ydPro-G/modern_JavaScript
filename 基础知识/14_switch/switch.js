@@ -54,9 +54,41 @@ switch(a){
     case 5:
         alert("wrong!");
         alert('yes!');
-        break;
+        break;   // switch/case有通过case进行分组的能力，其实是switch语句没有break的副作用，
+                //  没有break，case 3 会从(*)执行到case5
     
     default:
         alert("yes or no!");
 
 }
+
+
+// 类型很重要
+// switch和case之间是严格相等
+// switch用if写，为了精确实现switch功能，if必须用严格相等
+switch (browser) {
+    case 'Edge':
+      alert( "You've got the Edge!" );
+      break;
+  
+    case 'Chrome':
+    case 'Firefox':
+    case 'Safari':
+    case 'Opera':
+      alert( 'Okay we support these browsers too' );
+      break;
+  
+    default:
+      alert( 'We hope that this page looks ok!' );
+  }
+
+  if(browser === 'Edge') {
+      alert("you are got the Edge!");
+  }else if (browser === 'Chrome'
+  || browser === 'FireFox'
+  || browser === 'A'
+  || browser === 'B'){
+      alert('yes')
+  }else {
+      alert('no')
+  }
